@@ -1,0 +1,22 @@
+<!--
+By: Claire Gilda N. Dumo
+BSIT-4R3
+-->
+
+<!DOCTYPE HTML>
+<html data-ng-app="">
+<head>
+
+</head>
+<body data-ng-init="customers=[{name:'Claire Gilda',city:'Phoenix'}, {name:'Kurer Hiruda',city:'New York'} ,{name:'Hungry Pen',city:'San Francisco'}]">
+	Name:
+	<br/>
+	   <input type="text" data-ng-model="name"/>{{name}}
+	<br/>
+
+	<ul>
+		<li data-ng-repeat="cust in customers | filter:name | orderBy:'city'">{{cust.name+ '-' +cust.city}}</li>
+	</ul>
+ <script src="js/angular.min.js"></script>
+</body>
+</html>
